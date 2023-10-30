@@ -11,7 +11,7 @@ const coffee = ref({} as Coffee)
 onMounted(() => {
   axios.get(import.meta.env.VITE_API_URL + `/get-coffee/${itemId}`)
       .then((response) => {
-        coffee.value = response.data.coffee as Coffee
+        coffee.value = response.data.data as Coffee
       })
       .catch((error) => {
         console.log(error)
@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
   <div class="container mx-auto items-center justify-center flex my-auto">
-    <single-coffee-item :coffee="coffee"/>
+    <single-coffee-item :coffee="coffee" v-if="coffee"/>
   </div>
 
 </template>

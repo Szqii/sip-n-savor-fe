@@ -7,14 +7,12 @@ import {faChevronRight, faGlassWater} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const coffeeList = ref([] as Coffee[])
-// const apiUrl = import.meta.env.VITE_API_URL
 
 onMounted(() => {
-  console.log('mounted')
   axios.get(import.meta.env.VITE_API_URL + "/get-menu")
       .then((response) => {
         console.log(response.data)
-        coffeeList.value = response.data.coffeeList
+        coffeeList.value = response.data.data
       })
       .catch((error) => {
         console.log(error)
@@ -23,7 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div v-if="coffeeList.length > 0">
     <table class="table-fixed">
       <thead>
       <tr class="align-baseline">
