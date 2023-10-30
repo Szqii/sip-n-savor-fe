@@ -15,7 +15,6 @@
 #app {
     background: url("./bg.jpeg") center center/cover;
     min-height: 100vh;
-    min-height: 100vh;
     display: flex;
     font-family: 'Nunito', sans-serif;
 }
