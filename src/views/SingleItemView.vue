@@ -9,7 +9,7 @@ const itemId = router.currentRoute.value.params.id
 const coffee = ref({} as Coffee)
 
 onMounted(() => {
-  axios.get(`http://localhost:3000/api/get-coffee/${itemId}`)
+  axios.get(import.meta.env.VITE_API_URL + `/get-coffee/${itemId}`)
       .then((response) => {
         coffee.value = response.data.coffee as Coffee
       })

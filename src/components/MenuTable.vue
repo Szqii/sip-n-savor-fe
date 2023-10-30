@@ -7,10 +7,11 @@ import {faChevronRight, faGlassWater} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const coffeeList = ref([] as Coffee[])
+// const apiUrl = import.meta.env.VITE_API_URL
 
 onMounted(() => {
   console.log('mounted')
-  axios.get("http://localhost:3000/api/get-menu")
+  axios.get(import.meta.env.VITE_API_URL + "/get-menu")
       .then((response) => {
         console.log(response.data)
         coffeeList.value = response.data.coffeeList
