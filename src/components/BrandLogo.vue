@@ -4,7 +4,7 @@
 
 <template>
   <router-link class="w-64" to="/">
-    <img src="src/assets/logo.png" class="w-full" alt="Sip n Sour">
+    <img src="@/assets/logo.png" class="w-full" alt="Sip n Sour">
   </router-link>
 </template>
 
