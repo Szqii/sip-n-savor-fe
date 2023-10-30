@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
 import {ref} from "vue";
-import BrandLogo from "@/components/BrandLogo.vue";
 
 const isWaiterCalled = ref(false)
 const handleCallWaiterClick = () => {
