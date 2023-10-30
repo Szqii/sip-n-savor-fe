@@ -1,0 +1,25 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .main-button {
+        @apply py-4 px-8 bg-primary text-black transition-all rounded-sm shadow-md outline-none hover:bg-opacity-90 hover:scale-105 w-60;
+    }
+}
+
+#app {
+    background: url("./bg.jpeg") no-repeat center center/cover;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+
